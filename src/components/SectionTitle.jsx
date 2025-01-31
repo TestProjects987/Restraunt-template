@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-export default function SectionTitle({ subtitle, title }) {
+export default function SectionTitle({ subtitle, title, font }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -28,7 +28,7 @@ export default function SectionTitle({ subtitle, title }) {
           hidden: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0 },
         }}
-        className="text-customRed text-base font-schibsted uppercase mb-[10px] font-bold"
+        className="text-customRed text-base font-schibsted uppercase mb-5 font-bold"
       >
         - {subtitle} -
       </motion.span>
@@ -37,7 +37,9 @@ export default function SectionTitle({ subtitle, title }) {
           hidden: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0 },
         }}
-        className="lg:text-[3.438rem] text-[42px] text-customDarkGray lg:mb-16 mb-6 leading-[3.2rem]"
+        className={`text-[42px] lg:${
+          font ? `text-${font}` : "text-[3.438rem]"
+        } text-customDarkGray lg:mb-16 mb-6 leading-[3.2rem]`}
       >
         {title}
       </motion.p>

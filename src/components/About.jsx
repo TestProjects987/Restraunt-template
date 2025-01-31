@@ -1,5 +1,4 @@
 import { React, useRef } from "react";
-import Title from "./Title";
 import { motion, useScroll, useTransform } from "framer-motion";
 import RatingBar from "./RatingBar";
 import { Heart } from "react-feather";
@@ -9,6 +8,8 @@ import AboutImgs from "./AboutImgs";
 import TextCarousel from "./TextCarousel";
 import ContentText from "./ContentText";
 import FooterSection from "./FooterSection";
+import HeroSection from "./HeroSection";
+
 const staggerAnimation = {
   initial: {
     opacity: 0,
@@ -64,30 +65,7 @@ const About = () => {
 
   return (
     <>
-      <section
-        className="relative flex justify-center items-start h-[60vh] w-full"
-        aria-label="hero-section"
-      >
-        <div
-          className="w-full absolute h-full"
-          style={{
-            backgroundImage:
-              "url('https://craftohtml.themezaa.com/images/demo-restaurant-about-title-bg.jpg')",
-            backgroundSize: "140%",
-            backgroundPosition: "top",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
-        <motion.div
-          variants={staggerAnimation}
-          initial="initial"
-          animate="visible"
-          className="flex justify-center absolute top-[23%] items-center flex-col"
-        >
-          <Title />
-        </motion.div>
-      </section>
-
+      <HeroSection heading={"About Us"} subheading={"- Luxury Restraunt -"} />
       <section
         className="mx-container w-full h-1/2"
         aria-label="restaurant-images"

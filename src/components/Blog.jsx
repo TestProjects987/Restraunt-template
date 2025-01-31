@@ -1,10 +1,13 @@
 import React from "react";
-
+import HeroSection from "./HeroSection";
 const Blog = () => {
   return (
-    <div className="blog">
-      <h1>Blog</h1>
-    </div>
+    <>
+      <HeroSection
+        heading={"Latest Blog"}
+        subheading={"- Stories From Restraunt -"}
+      />
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Icons = ({ icon: Icon, category, selected }) => {
+const Icons = ({ icon: Icon, category, selected, isGalleryPage }) => {
   return (
     <div>
       <a
@@ -9,15 +9,15 @@ const Icons = ({ icon: Icon, category, selected }) => {
           selected ? "text-black" : " hover:text-black hover:scale-105"
         }`}
       >
-        {Icon ? (
+        {!isGalleryPage && Icon ? (
           <Icon
             className={`text-[45px] stroke-[0.7] transition-colors duration-300 ${
               selected ? "text-cusBg" : "group-hover:text-cusBg"
             }`}
           />
-        ) : (
+        ) : !isGalleryPage ? (
           "No Icon"
-        )}
+        ) : null}
         <p
           className={`text-[18px] font-schibsted leading-5 text-center border-b-2 pb-1 ${
             selected

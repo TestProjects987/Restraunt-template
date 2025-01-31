@@ -1,7 +1,12 @@
 import React from "react";
+import HeroSection from "./HeroSection";
 
 const Chefs = () => {
-  return <div>Chefs</div>;
+  return (
+    <>
+      <HeroSection heading={"Our Chef"} subheading={"- Meet Professionls -"} />
+    </>
+  );
 };
 
 export default Chefs;

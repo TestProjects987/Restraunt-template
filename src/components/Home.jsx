@@ -12,6 +12,7 @@ import ContentText from "./ContentText";
 import Testimonials from "./Testimonials";
 import RatingBar from "./RatingBar";
 import SectionTitle from "./SectionTitle";
+import PopularMenuSection from "./PopularMenuSection";
 
 export default function Home() {
   const AnimatedSection = ({ children, className }) => {
@@ -139,30 +140,7 @@ export default function Home() {
           />
         </motion.div>
       </section>
-      <section
-        className="relative  lg:py-[90px] py-12 bg-center"
-        style={{
-          backgroundImage:
-            "url('https://craftohtml.themezaa.com/images/demo-restaurant-home-05.jpg')",
-          // backgroundSize: "115%",
-          // backgroundRepeat: "no-repeat",
-          // backgroundPosition: "top 8% center",
-        }}
-      >
-        <div className="lg:mx-container sm:mx-12  md:mx-32">
-          <SectionTitle subtitle="CHOOSE DELICIOUS" title="POPULAR MENU" />
-          <TabContent />
-          <AnimatedSection className="flex md:flex-row flex-col items-center justify-center font-schibsted px-4 lg:p-0">
-            <div className="bg-red-700 mr-2 text-white font-medium rounded-2xl px-5 py-1 m-2 lg:m-0 text-center">
-              Masterchef{"  "}
-            </div>
-            <div className="text-lg inline-block font-normal text-center md:text-nowrap">
-              Unique and delicious dishes from the worlds{" "}
-              <span className="font-semibold underline">best masterchefs.</span>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <PopularMenuSection />
       <section className="lg:py-24 py-12">
         <div className="flex justify-center items-center flex-col lg:mx-container">
           <AnimatedSection>

@@ -12,12 +12,13 @@ export default {
       letterSpacing: {
         "title-tight": "-0.02em",
       },
-
+      cursor: "none",
       fontFamily: {
         bebas: ["Bebas Neue", "sans-serif"],
         schibsted: ["Schibsted Grotesk", "sans-serif"],
       },
       colors: {
+        cusborder: " rgba(35, 35, 35, 0.1)",
         customGray: "#282725",
         customLightGray: "#8d8987",
         customRed: "#d51f0f",

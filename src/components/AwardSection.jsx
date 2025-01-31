@@ -37,8 +37,8 @@ const AwardsSection = () => {
       <div className="grid grid-cols-4">
         {awards.map((award, index) => (
           <AwardCard
-            key={index} // React's key prop for list rendering
-            index={index} // Pass index as a separate prop
+            key={index}
+            index={index}
             imageUrl={award.imageUrl}
             awardName={award.awardName}
             year={award.year}

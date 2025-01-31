@@ -10,17 +10,14 @@ const CustomHover = () => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    // Add hover effects for specific elements
     const hoverElements = document.querySelectorAll("a, button, .hover-effect");
     hoverElements.forEach((element) => {
       element.addEventListener("mouseenter", () => setIsHovering(true));
       element.addEventListener("mouseleave", () => setIsHovering(false));
     });
 
-    // Track mouse movement
     document.addEventListener("mousemove", handleMouseMove);
 
-    // Cleanup
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       hoverElements.forEach((element) => {
